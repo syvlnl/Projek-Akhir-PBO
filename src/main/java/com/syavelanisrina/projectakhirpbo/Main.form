@@ -23,13 +23,112 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Component id="tanggalPergiL" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="penumpangL" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="tujuanL" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="asalL" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="asalTF" alignment="0" pref="151" max="32767" attributes="0"/>
+                  <Component id="tujuanTF" alignment="0" max="32767" attributes="0"/>
+                  <Component id="tanggalPergiTF" alignment="0" max="32767" attributes="0"/>
+                  <Component id="penumpangTF" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="cariTiketB" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="65" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+              <Component id="asalL" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+              <Component id="asalTF" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+              <Component id="tujuanL" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+              <Component id="tujuanTF" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+              <Component id="tanggalPergiL" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="tanggalPergiTF" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+              <Component id="penumpangL" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="penumpangTF" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+              <Component id="cariTiketB" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JTextField" name="asalTF">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField1"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="asalTFActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="asalL">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Dari"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="tujuanL">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ke"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="tanggalPergiL">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tanggal Pergi"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="penumpangL">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Penumpang"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tujuanTF">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField2"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tujuanTFActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tanggalPergiTF">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField3"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tanggalPergiTFActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="penumpangTF">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField4"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="penumpangTFActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="cariTiketB">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cari Tiket"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cariTiketBActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
 </Form>
