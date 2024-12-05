@@ -38,6 +38,7 @@ public class Main extends javax.swing.JFrame {
 
     public static void main(String args[]) {
         System.out.println("hellowolrld");
+	System.out.println("hi");
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
