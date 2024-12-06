@@ -3,11 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.syavelanisrina.projectakhirpbo;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-/**
- *
- * @author Asus
- */
 public class Main extends javax.swing.JFrame {
 
     /**
@@ -35,10 +34,12 @@ public class Main extends javax.swing.JFrame {
         tanggalPergiTF = new javax.swing.JTextField();
         penumpangTF = new javax.swing.JTextField();
         cariTiketB = new javax.swing.JButton();
+        tujuanPic = new javax.swing.JLabel();
+        asalPic = new javax.swing.JLabel();
+        penumpangPic = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        asalTF.setText("jTextField1");
         asalTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 asalTFActionPerformed(evt);
@@ -53,21 +54,18 @@ public class Main extends javax.swing.JFrame {
 
         penumpangL.setText("Penumpang");
 
-        tujuanTF.setText("jTextField2");
         tujuanTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tujuanTFActionPerformed(evt);
             }
         });
 
-        tanggalPergiTF.setText("jTextField3");
         tanggalPergiTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tanggalPergiTFActionPerformed(evt);
             }
         });
 
-        penumpangTF.setText("jTextField4");
         penumpangTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 penumpangTFActionPerformed(evt);
@@ -81,46 +79,67 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        tujuanPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/syavelanisrina/projectakhirpbo/project189-main/drawable-hdpi/location.png"))); // NOI18N
+
+        asalPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/syavelanisrina/projectakhirpbo/project189-main/drawable-hdpi/location.png"))); // NOI18N
+        asalPic.setPreferredSize(new java.awt.Dimension(15, 20));
+
+        penumpangPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/syavelanisrina/projectakhirpbo/project189-main/drawable-ldpi/bottom_btn4.png"))); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(tanggalPergiL, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(penumpangL, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tujuanL, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(asalL, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(asalTF, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
-                    .addComponent(tujuanTF, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tanggalPergiTF, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(penumpangTF, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(cariTiketB)
-                        .addGap(19, 19, 19)))
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(tujuanPic)
+                        .addComponent(asalPic, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(penumpangPic, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tanggalPergiL)
+                    .addComponent(penumpangL)
+                    .addComponent(tujuanL)
+                    .addComponent(asalL)
+                    .addComponent(penumpangTF)
+                    .addComponent(tanggalPergiTF)
+                    .addComponent(asalTF)
+                    .addComponent(tujuanTF))
+                .addGap(33, 33, 33))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(119, 119, 119)
+                .addComponent(cariTiketB)
+                .addContainerGap(143, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
+                .addGap(53, 53, 53)
                 .addComponent(asalL)
-                .addGap(4, 4, 4)
-                .addComponent(asalTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(asalPic, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(asalTF, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tujuanL)
                 .addGap(1, 1, 1)
-                .addComponent(tujuanTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tujuanPic, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tujuanTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
                 .addComponent(tanggalPergiL)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(tanggalPergiTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(penumpangL)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(penumpangTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addComponent(tanggalPergiTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(penumpangL)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(penumpangTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(penumpangPic, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                 .addComponent(cariTiketB)
                 .addGap(23, 23, 23))
         );
@@ -129,23 +148,39 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void asalTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asalTFActionPerformed
-        // TODO add your handling code here:
+        String asal = asalTF.getText();
+        asalTF.setText(asal.toUpperCase());
     }//GEN-LAST:event_asalTFActionPerformed
 
     private void tujuanTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tujuanTFActionPerformed
-        // TODO add your handling code here:
+        String tujuan = tujuanTF.getText();
+        tujuanTF.setText(tujuan.toUpperCase());
     }//GEN-LAST:event_tujuanTFActionPerformed
 
     private void cariTiketBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cariTiketBActionPerformed
-        // TODO add your handling code here:
+        if (asalTF.getText().isEmpty() || tujuanTF.getText().isEmpty() || tanggalPergiTF.getText().isEmpty() || penumpangTF.getText().isEmpty()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Harus diisi semua!", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        }
+        this.dispose();
     }//GEN-LAST:event_cariTiketBActionPerformed
 
     private void tanggalPergiTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tanggalPergiTFActionPerformed
-        // TODO add your handling code here:
+        String tanggalPergi = tanggalPergiTF.getText();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        sdf.setLenient(false);
+        
+        try {
+            Date date = sdf.parse(tanggalPergi);
+            tanggalPergiTF.setText(sdf.format(date));
+        } catch(ParseException e) {
+            javax.swing.JOptionPane.showMessageDialog (this, "Tanggal tidak valid! Format tanggal dd-mm-yyyy.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+            tanggalPergiTF.setText("");
+        }
     }//GEN-LAST:event_tanggalPergiTFActionPerformed
 
     private void penumpangTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_penumpangTFActionPerformed
-        // TODO add your handling code here:
+        String penumpang = penumpangTF.getText();
+        penumpangTF.setText(penumpang);
     }//GEN-LAST:event_penumpangTFActionPerformed
 
     /**
@@ -185,13 +220,16 @@ public class Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel asalL;
+    private javax.swing.JLabel asalPic;
     private javax.swing.JTextField asalTF;
     private javax.swing.JButton cariTiketB;
     private javax.swing.JLabel penumpangL;
+    private javax.swing.JLabel penumpangPic;
     private javax.swing.JTextField penumpangTF;
     private javax.swing.JLabel tanggalPergiL;
     private javax.swing.JTextField tanggalPergiTF;
     private javax.swing.JLabel tujuanL;
+    private javax.swing.JLabel tujuanPic;
     private javax.swing.JTextField tujuanTF;
     // End of variables declaration//GEN-END:variables
 }
