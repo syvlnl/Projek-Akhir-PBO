@@ -38,6 +38,7 @@ public class Main extends javax.swing.JFrame {
         asalPic = new javax.swing.JLabel();
         penumpangPic = new javax.swing.JLabel();
         titleL = new javax.swing.JLabel();
+        tanggalPergiPic = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,12 +48,16 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        asalL.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         asalL.setText("Dari");
 
+        tujuanL.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         tujuanL.setText("Ke");
 
+        tanggalPergiL.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         tanggalPergiL.setText("Tanggal Pergi");
 
+        penumpangL.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         penumpangL.setText("Penumpang");
 
         tujuanTF.addActionListener(new java.awt.event.ActionListener() {
@@ -87,49 +92,47 @@ public class Main extends javax.swing.JFrame {
 
         penumpangPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/syavelanisrina/projectakhirpbo/project189-main/drawable-ldpi/bottom_btn4.png"))); // NOI18N
 
-        titleL.setFont(new java.awt.Font("Franklin Gothic Heavy", 1, 18)); // NOI18N
+        titleL.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         titleL.setText("PEMESANAN TIKET");
+
+        tanggalPergiPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/syavelanisrina/projectakhirpbo/project189-main/calendar.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(124, 124, 124)
+                .addComponent(cariTiketB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(123, 123, 123))
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(tujuanPic)
-                                .addComponent(asalPic, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(penumpangPic, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tanggalPergiL)
-                            .addComponent(penumpangL)
-                            .addComponent(tujuanL)
-                            .addComponent(asalL)
-                            .addComponent(penumpangTF)
-                            .addComponent(tanggalPergiTF)
-                            .addComponent(asalTF)
-                            .addComponent(tujuanTF))
-                        .addGap(33, 33, 33))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(titleL)
-                                .addGap(97, 97, 97))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(57, 57, 57)
-                                .addComponent(cariTiketB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(123, 123, 123))))))
+                    .addComponent(tanggalPergiPic)
+                    .addComponent(tujuanPic)
+                    .addComponent(asalPic, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(penumpangPic, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tanggalPergiL)
+                    .addComponent(penumpangL)
+                    .addComponent(tujuanL)
+                    .addComponent(asalL)
+                    .addComponent(penumpangTF)
+                    .addComponent(tanggalPergiTF)
+                    .addComponent(asalTF)
+                    .addComponent(tujuanTF))
+                .addGap(33, 33, 33))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(80, 80, 80)
+                .addComponent(titleL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(84, 84, 84))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(titleL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(titleL, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(asalL)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -142,19 +145,20 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(tujuanPic, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tujuanTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tanggalPergiL)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tanggalPergiTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(penumpangL)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(penumpangTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tanggalPergiTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tanggalPergiPic))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(penumpangL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(penumpangTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(penumpangPic, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addComponent(cariTiketB)
+                .addGap(45, 45, 45)
+                .addComponent(cariTiketB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(24, 24, 24))
         );
 
@@ -241,6 +245,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel penumpangPic;
     private javax.swing.JTextField penumpangTF;
     private javax.swing.JLabel tanggalPergiL;
+    private javax.swing.JLabel tanggalPergiPic;
     private javax.swing.JTextField tanggalPergiTF;
     private javax.swing.JLabel titleL;
     private javax.swing.JLabel tujuanL;
