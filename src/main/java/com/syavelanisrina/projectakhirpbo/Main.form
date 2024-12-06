@@ -23,46 +23,61 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="tujuanPic" min="-2" max="-2" attributes="0"/>
-                      <Component id="asalPic" min="-2" pref="18" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="tujuanPic" min="-2" max="-2" attributes="0"/>
+                              <Component id="asalPic" min="-2" pref="18" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="penumpangPic" alignment="0" min="-2" pref="18" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="tanggalPergiL" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="penumpangL" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="tujuanL" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="asalL" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="penumpangTF" alignment="0" max="32767" attributes="0"/>
+                          <Component id="tanggalPergiTF" alignment="0" max="32767" attributes="0"/>
+                          <Component id="asalTF" max="32767" attributes="0"/>
+                          <Component id="tujuanTF" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="33" pref="33" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="penumpangPic" alignment="0" min="-2" pref="18" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="titleL" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="57" pref="57" max="-2" attributes="0"/>
+                              <Component id="cariTiketB" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="tanggalPergiL" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="penumpangL" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="tujuanL" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="asalL" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="penumpangTF" alignment="0" max="32767" attributes="0"/>
-                  <Component id="tanggalPergiTF" alignment="0" max="32767" attributes="0"/>
-                  <Component id="asalTF" max="32767" attributes="0"/>
-                  <Component id="tujuanTF" alignment="0" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace min="33" pref="33" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
-              <Component id="cariTiketB" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="143" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+              <Component id="titleL" max="32767" attributes="0"/>
+              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Component id="asalL" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="asalPic" min="-2" pref="26" max="-2" attributes="0"/>
                   <Component id="asalTF" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="tujuanL" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -71,9 +86,9 @@
               </Group>
               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Component id="tanggalPergiL" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="tanggalPergiTF" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="penumpangL" min="-2" max="-2" attributes="0"/>
@@ -82,9 +97,9 @@
                   </Group>
                   <Component id="penumpangPic" min="-2" pref="26" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="68" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Component id="cariTiketB" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -160,6 +175,14 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/com/syavelanisrina/projectakhirpbo/project189-main/drawable-ldpi/bottom_btn4.png"/>
         </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="titleL">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Franklin Gothic Heavy" size="18" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="PEMESANAN TIKET"/>
       </Properties>
     </Component>
   </SubComponents>
