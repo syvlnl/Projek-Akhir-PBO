@@ -6,7 +6,7 @@ public class Train {
     private String departure;
     private String arrivetime;
 
-    public Train(String nametrain, double price, String departure, String arrivetime ){
+    public Train(String nametrain, double price, String departure, String arrivetime) {
         this.nametrain = nametrain;
         this.price = price;
         this.departure = departure;
@@ -23,10 +23,10 @@ public class Train {
 
     public String getDeparture() {
         return departure;
+        System.out.println("he");
     }
 
     public String getArrivetime() {
         return arrivetime;
     }
 }
-
