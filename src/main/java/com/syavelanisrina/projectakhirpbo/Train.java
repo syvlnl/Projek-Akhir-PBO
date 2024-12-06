@@ -23,7 +23,6 @@ public class Train {
 
     public String getDeparture() {
         return departure;
-        System.out.println("he");
     }
 
     public String getArrivetime() {
