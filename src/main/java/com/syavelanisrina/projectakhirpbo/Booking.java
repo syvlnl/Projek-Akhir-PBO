@@ -30,15 +30,15 @@ public class Booking extends javax.swing.JFrame {
         tanggalPergiL = new javax.swing.JLabel();
         penumpangL = new javax.swing.JLabel();
         titleL = new javax.swing.JLabel();
-        asalTF = new javax.swing.JTextField();
         penumpangTF = new javax.swing.JTextField();
-        tujuanTF = new javax.swing.JTextField();
         tanggalTF = new javax.swing.JTextField();
         calenderIcon = new javax.swing.JLabel();
         markerIcon1 = new javax.swing.JLabel();
         markerIcon2 = new javax.swing.JLabel();
         sitIcon = new javax.swing.JLabel();
         cariTiketB = new javax.swing.JButton();
+        dariComboBox = new javax.swing.JComboBox<>();
+        keComboBox = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,21 +57,9 @@ public class Booking extends javax.swing.JFrame {
         titleL.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
         titleL.setText("PEMESANAN TIKET");
 
-        asalTF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                asalTFActionPerformed(evt);
-            }
-        });
-
         penumpangTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 penumpangTFActionPerformed(evt);
-            }
-        });
-
-        tujuanTF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tujuanTFActionPerformed(evt);
             }
         });
 
@@ -103,6 +91,20 @@ public class Booking extends javax.swing.JFrame {
             }
         });
 
+        dariComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Jakarta", "Bandung", "Bekasi", "Semarang", "Solo", "Yogyakarta", "Surabaya" }));
+        dariComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dariComboBoxActionPerformed(evt);
+            }
+        });
+
+        keComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Jakarta", "Bandung", "Bekasi", "Semarang", "Solo", "Yogyakarta", "Surabaya" }));
+        keComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                keComboBoxActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -122,17 +124,17 @@ public class Booking extends javax.swing.JFrame {
                                     .addComponent(markerIcon1)
                                     .addComponent(markerIcon2)
                                     .addComponent(sitIcon))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(asalL)
                                     .addComponent(tujuanL)
                                     .addComponent(tanggalPergiL)
                                     .addComponent(penumpangL)
                                     .addComponent(tanggalTF, javax.swing.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE)
-                                    .addComponent(tujuanTF)
-                                    .addComponent(asalTF)
-                                    .addComponent(penumpangTF))))))
-                .addContainerGap(51, Short.MAX_VALUE))
+                                    .addComponent(penumpangTF)
+                                    .addComponent(dariComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(keComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -143,17 +145,15 @@ public class Booking extends javax.swing.JFrame {
                 .addComponent(asalL)
                 .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(asalTF, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(markerIcon1))
+                    .addComponent(markerIcon1)
+                    .addComponent(dariComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(tujuanL)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tujuanTF, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(markerIcon2)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(18, 18, 18)
+                    .addComponent(markerIcon2)
+                    .addComponent(keComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addComponent(tanggalPergiL)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -179,26 +179,16 @@ public class Booking extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void asalTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asalTFActionPerformed
-        String asal = asalTF.getText();
-        asalTF.setText(asal.toUpperCase());
-    }//GEN-LAST:event_asalTFActionPerformed
-
     private void penumpangTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_penumpangTFActionPerformed
-        String penumpang = penumpangTF.getText();
-        penumpangTF.setText(penumpang);
+
     }//GEN-LAST:event_penumpangTFActionPerformed
 
-    private void tujuanTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tujuanTFActionPerformed
-        String tujuan = tujuanTF.getText();
-        tujuanTF.setText(tujuan.toUpperCase());
-    }//GEN-LAST:event_tujuanTFActionPerformed
-
+    
     private void tanggalTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tanggalTFActionPerformed
         String tanggal = tanggalTF.getText();
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
         sdf.setLenient(false);
-        
+            
         try {
             Date date = sdf.parse(tanggal);
             tanggalTF.setText(sdf.format(date));
@@ -209,15 +199,67 @@ public class Booking extends javax.swing.JFrame {
     }//GEN-LAST:event_tanggalTFActionPerformed
 
     private void cariTiketBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cariTiketBActionPerformed
-        if (asalTF.getText().isEmpty() || tujuanTF.getText().isEmpty() || tanggalTF.getText().isEmpty() || penumpangTF.getText().isEmpty()) {
-            javax.swing.JOptionPane.showMessageDialog(this, "Harus diisi semua!", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
-        } else {
+    String tanggal = tanggalTF.getText();
+    SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+    sdf.setLenient(false);
+
+    try {
+        Date date = sdf.parse(tanggal);
+        tanggalTF.setText(sdf.format(date)); // Normalisasi tanggal jika valid
+
+        if (penumpangTF.getText().isEmpty()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Harap mengisi jumlah penumpang!", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        try {
+            int jumlahPenumpang = Integer.parseInt(penumpangTF.getText());
+            if (jumlahPenumpang <= 0) {
+                javax.swing.JOptionPane.showMessageDialog(this, "Jumlah penumpang harus lebih dari 0!", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+        } catch (NumberFormatException e) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Jumlah penumpang harus berupa angka!", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        if (dariComboBox.getSelectedItem().equals(keComboBox.getSelectedItem())) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Asal dan tujuan tidak boleh sama!", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
         DetailPemesanan detailpemesanan = new DetailPemesanan();
         detailpemesanan.setVisible(true);
         this.dispose();
-        }
+
+    } catch (ParseException e) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Tanggal tidak valid! Format tanggal harus dd-MM-yyyy.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        tanggalTF.setText("");
+    }
     }//GEN-LAST:event_cariTiketBActionPerformed
 
+    private void dariComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dariComboBoxActionPerformed
+        if (dariComboBox.getSelectedItem() != null && dariComboBox.getSelectedItem().equals(keComboBox.getSelectedItem())) {
+            javax.swing.JOptionPane.showMessageDialog(Booking.this, 
+                "Asal dan tujuan tidak boleh sama!", 
+                "Peringatan", 
+                javax.swing.JOptionPane.WARNING_MESSAGE);
+            dariComboBox.setSelectedIndex(0); // Atur ulang ComboBox asal
+        }
+    }//GEN-LAST:event_dariComboBoxActionPerformed
+
+    private void keComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keComboBoxActionPerformed
+        if (keComboBox.getSelectedItem() != null && keComboBox.getSelectedItem().equals(dariComboBox.getSelectedItem())) {
+            javax.swing.JOptionPane.showMessageDialog(Booking.this, 
+                "Asal dan tujuan tidak boleh sama!", 
+                "Peringatan", 
+                javax.swing.JOptionPane.WARNING_MESSAGE);
+            keComboBox.setSelectedIndex(0); // Atur ulang ComboBox tujuan
+        }
+    }//GEN-LAST:event_keComboBoxActionPerformed
+
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -256,9 +298,10 @@ public class Booking extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel asalL;
-    private javax.swing.JTextField asalTF;
     private javax.swing.JLabel calenderIcon;
     private javax.swing.JButton cariTiketB;
+    private javax.swing.JComboBox<String> dariComboBox;
+    private javax.swing.JComboBox<String> keComboBox;
     private javax.swing.JLabel markerIcon1;
     private javax.swing.JLabel markerIcon2;
     private javax.swing.JLabel penumpangL;
@@ -268,6 +311,5 @@ public class Booking extends javax.swing.JFrame {
     private javax.swing.JTextField tanggalTF;
     private javax.swing.JLabel titleL;
     private javax.swing.JLabel tujuanL;
-    private javax.swing.JTextField tujuanTF;
     // End of variables declaration//GEN-END:variables
 }

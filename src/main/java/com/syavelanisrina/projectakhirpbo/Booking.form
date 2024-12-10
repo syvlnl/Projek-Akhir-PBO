@@ -40,22 +40,22 @@
                                   <Component id="markerIcon2" min="-2" max="-2" attributes="0"/>
                                   <Component id="sitIcon" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="asalL" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="tujuanL" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="tanggalPergiL" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="penumpangL" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="tanggalTF" alignment="0" pref="348" max="32767" attributes="0"/>
-                                  <Component id="tujuanTF" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="asalTF" alignment="0" max="32767" attributes="0"/>
                                   <Component id="penumpangTF" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="dariComboBox" max="32767" attributes="0"/>
+                                  <Component id="keComboBox" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="51" max="32767" attributes="0"/>
+              <EmptySpace pref="57" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -66,22 +66,19 @@
               <Component id="titleL" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
               <Component id="asalL" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="asalTF" min="-2" pref="42" max="-2" attributes="0"/>
                   <Component id="markerIcon1" min="-2" max="-2" attributes="0"/>
+                  <Component id="dariComboBox" min="-2" pref="42" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="tujuanL" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="tujuanTF" pref="42" max="32767" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <Component id="markerIcon2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="markerIcon2" min="-2" max="-2" attributes="0"/>
+                  <Component id="keComboBox" min="-2" pref="42" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace pref="18" max="32767" attributes="0"/>
               <Component id="tanggalPergiL" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -153,19 +150,9 @@
         <Property name="text" type="java.lang.String" value="PEMESANAN TIKET"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="asalTF">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="asalTFActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JTextField" name="penumpangTF">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="penumpangTFActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JTextField" name="tujuanTF">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tujuanTFActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="tanggalTF">
@@ -229,6 +216,48 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cariTiketBActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="dariComboBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="7">
+            <StringItem index="0" value="Jakarta"/>
+            <StringItem index="1" value="Bandung"/>
+            <StringItem index="2" value="Bekasi"/>
+            <StringItem index="3" value="Semarang"/>
+            <StringItem index="4" value="Solo"/>
+            <StringItem index="5" value="Yogyakarta"/>
+            <StringItem index="6" value="Surabaya"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dariComboBoxActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="keComboBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="7">
+            <StringItem index="0" value="Jakarta"/>
+            <StringItem index="1" value="Bandung"/>
+            <StringItem index="2" value="Bekasi"/>
+            <StringItem index="3" value="Semarang"/>
+            <StringItem index="4" value="Solo"/>
+            <StringItem index="5" value="Yogyakarta"/>
+            <StringItem index="6" value="Surabaya"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="keComboBoxActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>
