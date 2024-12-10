@@ -26,114 +26,196 @@ public class DetailPemesanan extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        detailtitleL = new javax.swing.JLabel();
+        namaL = new javax.swing.JLabel();
+        emailL = new javax.swing.JLabel();
+        teleponL = new javax.swing.JLabel();
+        ktpL = new javax.swing.JLabel();
+        namaTF = new javax.swing.JTextField();
+        emailTF = new javax.swing.JTextField();
+        ktpTF = new javax.swing.JTextField();
+        teleponTF = new javax.swing.JTextField();
+        cariTiketB = new javax.swing.JButton();
+        cariTiketB1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        TextFieldNama = new javax.swing.JTextField();
-        TextFieldEmail = new javax.swing.JTextField();
-        TextFieldNoTelp = new javax.swing.JTextField();
-        TextFieldNoKtp = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setText("Detail Pemesanan");
+        detailtitleL.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        detailtitleL.setText("DETAIL PEMESANAN");
 
-        jLabel2.setText("Nama");
+        namaL.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        namaL.setText("Nama");
 
-        jLabel3.setText("Email");
+        emailL.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        emailL.setText("Email");
 
-        jLabel4.setText("No Telepon");
+        teleponL.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        teleponL.setText("No Telepon");
 
-        jLabel5.setText("No KTP");
+        ktpL.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        ktpL.setText("No KTP");
 
-        TextFieldNama.addActionListener(new java.awt.event.ActionListener() {
+        namaTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextFieldNamaActionPerformed(evt);
+                namaTFActionPerformed(evt);
             }
         });
 
-        TextFieldEmail.addActionListener(new java.awt.event.ActionListener() {
+        emailTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextFieldEmailActionPerformed(evt);
+                emailTFActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Next");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ktpTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ktpTFActionPerformed(evt);
             }
         });
+
+        teleponTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                teleponTFActionPerformed(evt);
+            }
+        });
+
+        cariTiketB.setBackground(new java.awt.Color(255, 0, 0));
+        cariTiketB.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        cariTiketB.setForeground(new java.awt.Color(0, 0, 0));
+        cariTiketB.setText("Next");
+        cariTiketB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cariTiketBActionPerformed(evt);
+            }
+        });
+
+        cariTiketB1.setBackground(new java.awt.Color(153, 255, 51));
+        cariTiketB1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        cariTiketB1.setForeground(new java.awt.Color(0, 0, 0));
+        cariTiketB1.setText("Next");
+        cariTiketB1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cariTiketB1ActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/syavelanisrina/projectakhirpbo/Resource/nama.png"))); // NOI18N
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/syavelanisrina/projectakhirpbo/Resource/email.png"))); // NOI18N
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/syavelanisrina/projectakhirpbo/Resource/nomorTelepon.png"))); // NOI18N
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/syavelanisrina/projectakhirpbo/Resource/ktp.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(93, 93, 93)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel4)
-                            .addComponent(TextFieldNama)
-                            .addComponent(TextFieldEmail)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel5)
-                            .addComponent(TextFieldNoTelp, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
-                            .addComponent(TextFieldNoKtp)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(133, 133, 133)
-                        .addComponent(jButton1)))
-                .addContainerGap(19, Short.MAX_VALUE))
+                    .addComponent(ktpTF, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(ktpL)
+                        .addComponent(teleponL)
+                        .addComponent(namaL)
+                        .addComponent(namaTF, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
+                        .addComponent(emailL)
+                        .addComponent(emailTF)
+                        .addComponent(teleponTF))
+                    .addComponent(cariTiketB, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(57, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(detailtitleL)
+                .addGap(90, 90, 90))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(300, Short.MAX_VALUE)
+                    .addComponent(cariTiketB1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(47, 47, 47)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(17, 17, 17)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TextFieldNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(69, 69, 69)
+                .addComponent(detailtitleL)
+                .addGap(35, 35, 35)
+                .addComponent(namaL)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(namaTF, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(18, 18, 18)
+                .addComponent(emailL)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TextFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(emailTF, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addGap(18, 18, 18)
+                .addComponent(teleponL)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TextFieldNoTelp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(teleponTF, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addGap(18, 18, 18)
+                .addComponent(ktpL)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TextFieldNoKtp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(jButton1)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ktpTF, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
+                .addComponent(cariTiketB, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(128, 128, 128))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(613, Short.MAX_VALUE)
+                    .addComponent(cariTiketB1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(127, 127, 127)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void TextFieldNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldNamaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextFieldNamaActionPerformed
+    private void namaTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namaTFActionPerformed
+        String nama = namaTF.getText();
+        namaTF.setText(nama.toUpperCase());
+    }//GEN-LAST:event_namaTFActionPerformed
 
-    private void TextFieldEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextFieldEmailActionPerformed
+    private void emailTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTFActionPerformed
+        String email = emailTF.getText();
+        emailTF.setText(email.toUpperCase());
+    }//GEN-LAST:event_emailTFActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void ktpTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ktpTFActionPerformed
+        String ktp = ktpTF.getText();
+        ktpTF.setText(ktp.toUpperCase());
+    }//GEN-LAST:event_ktpTFActionPerformed
+
+    private void teleponTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teleponTFActionPerformed
+        String telepon = teleponTF.getText();
+        teleponTF.setText(telepon.toUpperCase());
+    }//GEN-LAST:event_teleponTFActionPerformed
+
+    private void cariTiketBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cariTiketBActionPerformed
+        Booking booking = new Booking();
+        booking.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_cariTiketBActionPerformed
+
+    private void cariTiketB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cariTiketB1ActionPerformed
+
+    }//GEN-LAST:event_cariTiketB1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,15 +253,20 @@ public class DetailPemesanan extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField TextFieldEmail;
-    private javax.swing.JTextField TextFieldNama;
-    private javax.swing.JTextField TextFieldNoKtp;
-    private javax.swing.JTextField TextFieldNoTelp;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton cariTiketB;
+    private javax.swing.JButton cariTiketB1;
+    private javax.swing.JLabel detailtitleL;
+    private javax.swing.JLabel emailL;
+    private javax.swing.JTextField emailTF;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel ktpL;
+    private javax.swing.JTextField ktpTF;
+    private javax.swing.JLabel namaL;
+    private javax.swing.JTextField namaTF;
+    private javax.swing.JLabel teleponL;
+    private javax.swing.JTextField teleponTF;
     // End of variables declaration//GEN-END:variables
 }
