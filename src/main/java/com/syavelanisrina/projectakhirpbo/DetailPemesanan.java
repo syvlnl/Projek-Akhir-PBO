@@ -123,27 +123,24 @@ public class DetailPemesanan extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(ktpTF, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(ktpL)
-                        .addComponent(teleponL)
-                        .addComponent(namaL)
-                        .addComponent(namaTF, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
-                        .addComponent(emailL)
-                        .addComponent(emailTF)
-                        .addComponent(teleponTF))
-                    .addComponent(cariTiketB, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ktpL)
+                    .addComponent(teleponL)
+                    .addComponent(namaL)
+                    .addComponent(namaTF)
+                    .addComponent(emailL)
+                    .addComponent(emailTF)
+                    .addComponent(teleponTF)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(cariTiketB, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cariTiketB1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(57, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(detailtitleL)
                 .addGap(90, 90, 90))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(300, Short.MAX_VALUE)
-                    .addComponent(cariTiketB1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(47, 47, 47)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,13 +172,10 @@ public class DetailPemesanan extends javax.swing.JFrame {
                     .addComponent(ktpTF, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
-                .addComponent(cariTiketB, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cariTiketB, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cariTiketB1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(128, 128, 128))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(613, Short.MAX_VALUE)
-                    .addComponent(cariTiketB1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(127, 127, 127)))
         );
 
         pack();
@@ -193,18 +187,15 @@ public class DetailPemesanan extends javax.swing.JFrame {
     }//GEN-LAST:event_namaTFActionPerformed
 
     private void emailTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTFActionPerformed
-        String email = emailTF.getText();
-        emailTF.setText(email.toUpperCase());
+
     }//GEN-LAST:event_emailTFActionPerformed
 
     private void ktpTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ktpTFActionPerformed
-        String ktp = ktpTF.getText();
-        ktpTF.setText(ktp.toUpperCase());
+
     }//GEN-LAST:event_ktpTFActionPerformed
 
     private void teleponTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teleponTFActionPerformed
-        String telepon = teleponTF.getText();
-        teleponTF.setText(telepon.toUpperCase());
+
     }//GEN-LAST:event_teleponTFActionPerformed
 
     private void cariTiketBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cariTiketBActionPerformed
@@ -214,7 +205,33 @@ public class DetailPemesanan extends javax.swing.JFrame {
     }//GEN-LAST:event_cariTiketBActionPerformed
 
     private void cariTiketB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cariTiketB1ActionPerformed
+        String email = emailTF.getText();
+        String telepon = teleponTF.getText();
+        String ktp = ktpTF.getText();
 
+        String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+
+        boolean isTeleponValid = telepon.matches("\\d{10,}");
+        String ktpRegex = "^[0-9]";
+
+        if (!email.matches(emailRegex)) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Email harus menggunakan format 'example@company.com'.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        return;
+        }
+
+        if (!isTeleponValid) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Nomor telepon harus terdiri dari 10 digit atau lebih.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        return;
+        }
+        
+        if (!ktp.matches(ktpRegex)) {
+        javax.swing.JOptionPane.showMessageDialog(this, "KTP harus berupa angka.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        return;
+        }
+        
+        Tickets tickets = new Tickets();
+        tickets.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_cariTiketB1ActionPerformed
 
     /**
